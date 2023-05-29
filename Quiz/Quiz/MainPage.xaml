@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:magic="clr-namespace:MagicGradients;assembly=MagicGradients"
+             x:Class="Quiz.MainPage">
+
+ <Grid > 
+        <magic:GradientView VerticalOptions="FillAndExpand">
+            <magic:GradientView.GradientSource>
+                <magic:LinearGradient Angle="353">
+                    <magic:GradientStop Color="#b2dafa" Offset=".15"/>
+                    <magic:GradientStop Color="#d5c7dd" Offset=".47"/>
+                    <magic:GradientStop Color="#ffb1bb" Offset="1"/>
+                </magic:LinearGradient>
+            </magic:GradientView.GradientSource>
+        </magic:GradientView>
+
+        <Grid Grid.Row="0" Margin="0,10,0,0">
+            <StackLayout Orientation="Vertical"
+                         Margin="30,30">
+                
+              <Label x:Name="label"
+                     Text="Quiz de Materias"
+                     VerticalOptions="Fill"
+                     HorizontalOptions="CenterAndExpand" 
+                     FontFamily=""
+                     FontSize="40"
+                     TextColor="Black"
+                     FontAttributes="Bold"
+                     
+                     />
+                <Label Text="Contesta correctamente las preguntas"
+                       VerticalOptions="Center"
+                       HorizontalOptions="CenterAndExpand"
+                       FontSize="25"
+                       TextColor="Gray"
+                       Padding="20"
+                       
+                       
+                    />
+
+            </StackLayout>
+            
+        </Grid>
+     
+        <StackLayout Margin="20,250,20,20">
+            <Button x:Name="Es"
+                    Text="Español"
+                    Clicked="es"
+                    Background="Salmon"
+                    BorderColor="Aquamarine"
+                    BorderWidth="1"
+                    CornerRadius="10"
+                    FontSize="20"
+                    FontAttributes="Bold"
+                    />
+
+            <Button x:Name="btnMa"
+                    Text="Matematícas"
+                    Clicked="btnMa_Clicked"
+                    Background="Salmon"
+                    BorderColor="Aquamarine"
+                    BorderWidth="1"
+                    CornerRadius="10"
+                    FontAttributes="Bold"
+                    FontSize="20"
+                />
+
+            <Button x:Name="btnHi"
+                    Text="Historia"
+                    Clicked="btnHi_Clicked"
+                    Background="Salmon"
+                    BorderColor="Aquamarine"
+                    BorderWidth="1"
+                    CornerRadius="10"
+                    FontAttributes="Bold"
+                    FontSize="20"
+                />
+
+            <Button x:Name="btnGeo"  
+                    Text="Geografía"
+                    Clicked="btnGe_Clicked"
+                    Background="Salmon"
+                    BorderColor="Aquamarine"
+                    BorderWidth="1"
+                    CornerRadius="10"
+                    FontAttributes="Bold"
+                    FontSize="20"
+            />
+
+
+        </StackLayout>
+    </Grid>
+</ContentPage>

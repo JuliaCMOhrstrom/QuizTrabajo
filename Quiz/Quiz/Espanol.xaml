@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Quiz.Espanol">
+    <Grid>
+
+        <Grid Grid.Row="0" Margin="0,10,0,0">
+            <StackLayout Orientation="Vertical"
+                     Margin="30,30"
+                     >
+            
+            <Label Text="Español"
+                VerticalOptions="Fill" 
+                HorizontalOptions="CenterAndExpand"
+                   FontSize="50"
+                   FontFamily="Lobster-Regular"
+                   FontAttributes="Bold"
+                   />
+            <Label Text="Seleccione la respuesta correcta"
+                   HorizontalOptions="Center"
+                   FontSize="20"
+                   FontFamily="Italic"/>
+
+            <Label x:Name="lblPregunta"
+                   />
+           
+        </StackLayout>
+        </Grid>
+        
+        <StackLayout Margin="20,250,20,20">
+            <Button Text="RespuestasA"
+                    x:Name="btnresp1"
+                    Background="Salmon"
+                    BorderColor="Aquamarine"
+                    BorderWidth="1"
+                    CornerRadius="20"
+                    />
+            <Button Text="RespuestasB"
+                    x:Name="btnresp2"
+                    Background="Salmon"
+                    BorderColor="Aquamarine"
+                    BorderWidth="1"
+                    CornerRadius="20"
+                    />
+            <Button Text="RespuestasC"
+                    x:Name="btnresp3"
+                    Background="Salmon"
+                    BorderColor="Aquamarine"
+                    BorderWidth="1"
+                    CornerRadius="20"
+                    />
+            <Button Text="RespuestasC"
+                    x:Name="btnresp4"
+                    Background="Salmon"
+                    BorderColor="Aquamarine"
+                    BorderWidth="1"
+                    CornerRadius="20"
+
+                    />
+        </StackLayout>
+    </Grid>
+</ContentPage>
