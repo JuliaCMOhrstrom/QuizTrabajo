@@ -34,6 +34,7 @@
                     BorderColor="Aquamarine"
                     BorderWidth="1"
                     CornerRadius="20"
+                    Clicked="Button1_Clicked"
                     />
             <Button Text="RespuestasB"
                     x:Name="btnresp2"
@@ -41,6 +42,7 @@
                     BorderColor="Aquamarine"
                     BorderWidth="1"
                     CornerRadius="20"
+                    Clicked="Button2_Clicked"
                     />
             <Button Text="RespuestasC"
                     x:Name="btnresp3"
@@ -48,15 +50,27 @@
                     BorderColor="Aquamarine"
                     BorderWidth="1"
                     CornerRadius="20"
+                    Clicked="Button3_Clicked"
                     />
-            <Button Text="RespuestasC"
+            <Button Text="RespuestasD"
                     x:Name="btnresp4"
                     Background="Salmon"
                     BorderColor="Aquamarine"
                     BorderWidth="1"
                     CornerRadius="20"
-
+                    Clicked="Button4_Clicked"
                     />
+            <Button Text="Regresar"
+                    x:Name="Regresar"
+                    Background="Aquamarine"
+                    CornerRadius="20"
+                    TextColor="Black"
+                    FontAttributes="Bold"
+                    HorizontalOptions="Start"
+                    VerticalOptions="StartAndExpand"
+                    Clicked="Re"
+                    />
+            
         </StackLayout>
     </Grid>
 </ContentPage>

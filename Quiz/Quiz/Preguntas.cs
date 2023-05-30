@@ -24,5 +24,7 @@ namespace Quiz
 
         public Preguntas(string[] args) { }
         public Preguntas setting_pregunta(Preguntas quest) { return quest; }
+
+
     }
 }

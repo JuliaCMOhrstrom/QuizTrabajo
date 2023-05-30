@@ -11,8 +11,8 @@ namespace Quiz
             InitializeComponent();
 
             //MainPage = new MainPage();
-            MainPage = new Espanol();
-            //MainPage = new NavigationPage(new MainPage());
+            //MainPage = new Espanol();
+            MainPage = new NavigationPage(new MainPage());
         }
 
         protected override void OnStart()

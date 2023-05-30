@@ -33,6 +33,7 @@
                     BorderColor="Aquamarine"
                     BorderWidth="1"
                     CornerRadius="20"
+
                     />
             <Button Text="RespuestasB"
                     x:Name="btnresp2"
@@ -56,6 +57,18 @@
                     CornerRadius="20"
 
                     />
+
+            <Button Text="Regresar"
+                    x:Name="Regresar"
+                    Background="Aquamarine"
+                    CornerRadius="20"
+                    TextColor="Black"
+                    FontAttributes="Bold"
+                    HorizontalOptions="Start"
+                    VerticalOptions="StartAndExpand"
+                    Clicked="Re"
+                    />
+            
         </StackLayout>
     </Grid>
 </ContentPage>

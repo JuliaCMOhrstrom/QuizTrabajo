@@ -73,6 +73,10 @@ namespace Quiz
         {
             InitializeComponent();
         }
+        async void Re(object sender, EventArgs args)
+        {
+            await Navigation.PushAsync(new MainPage());
+        }
         public object btnPuntuacion { get; private set; }
         public static List<Preguntas> Listapreguntas { get => listapreguntas; set => listapreguntas = value; }
         public static List<Preguntas> Listapreguntas1 { get => listapreguntas; set => listapreguntas = value; }
@@ -90,9 +94,9 @@ namespace Quiz
             {
                 lblPregunta.Text = list.Quest_;
                 btnresp1.Text = list.resp1_;
-                btnresp1.Text = list.resp2_;
-                btnresp1.Text = list.resp3_;
-                btnresp1.Text = list.resp4_;
+                btnresp2.Text = list.resp2_;
+                btnresp3.Text = list.resp3_;
+                btnresp4.Text = list.resp4_;
                 RespuestaCorrecta = list.Correcto;
             }
             catch (Exception)
@@ -119,9 +123,9 @@ namespace Quiz
             point++;
             SetPregunta(point);
         }
-        private void Botton3_Clicked(object sender, EventArgs e)
+        private void Button3_Clicked(object sender, EventArgs e)
         {
-            if (btnresp1.Text == RespuestaCorrecta)
+            if (btnresp3.Text == RespuestaCorrecta)
             {
                 score++;
             }
@@ -130,7 +134,7 @@ namespace Quiz
         }
         private void Button4_Clicked(object sender, EventArgs e)
         {
-            if (btnresp2.Text == RespuestaCorrecta)
+            if (btnresp4.Text == RespuestaCorrecta)
             {
                 score++;
             }

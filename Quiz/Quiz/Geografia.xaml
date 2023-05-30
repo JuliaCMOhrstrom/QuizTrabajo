@@ -56,6 +56,17 @@
                     CornerRadius="20"
 
                     />
+
+            <Button Text="Regresar"
+                    x:Name="Regresar"
+                    Background="Aquamarine"
+                    CornerRadius="20"
+                    TextColor="Black"
+                    FontAttributes="Bold"
+                    HorizontalOptions="Start"
+                    VerticalOptions="StartAndExpand"
+                    Clicked="Re"
+                    />
         </StackLayout>
     </Grid>
 </ContentPage>
