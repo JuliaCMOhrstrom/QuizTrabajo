@@ -22,13 +22,14 @@
                    FontFamily="Italic"/>
 
             <Label x:Name="lblPregunta"
+                   Text="¿Quién es el autor de la frase 'Pienso, luego existo'?"
                    />
            
         </StackLayout>
         </Grid>
         
         <StackLayout Margin="20,250,20,20">
-            <Button Text="RespuestasA"
+            <Button Text="Platon"
                     x:Name="btnresp1"
                     Background="Salmon"
                     BorderColor="Aquamarine"
@@ -36,7 +37,7 @@
                     CornerRadius="20"
                     Clicked="Button1_Clicked"
                     />
-            <Button Text="RespuestasB"
+            <Button Text="Galileo Galilei"
                     x:Name="btnresp2"
                     Background="Salmon"
                     BorderColor="Aquamarine"
@@ -44,7 +45,7 @@
                     CornerRadius="20"
                     Clicked="Button2_Clicked"
                     />
-            <Button Text="RespuestasC"
+            <Button Text="Descartes"
                     x:Name="btnresp3"
                     Background="Salmon"
                     BorderColor="Aquamarine"
@@ -52,7 +53,7 @@
                     CornerRadius="20"
                     Clicked="Button3_Clicked"
                     />
-            <Button Text="RespuestasD"
+            <Button Text="Sócrates"
                     x:Name="btnresp4"
                     Background="Salmon"
                     BorderColor="Aquamarine"
@@ -70,7 +71,32 @@
                     VerticalOptions="StartAndExpand"
                     Clicked="Re"
                     />
-            
+            <StackLayout>
+                <Grid Margin="0,30,0,0">
+                    <Button
+                        Text="Mostrar Puntuación final"
+                        x:Name="btnpuntuacion"
+                        TextColor="Black"
+                        Background="Aquamarine"
+                        HorizontalOptions="EndAndExpand"
+                        VerticalOptions="EndAndExpand"
+                        FontAttributes="Bold"
+                        Clicked="MostrarAlerta"
+                        BorderWidth="50"
+                        CornerRadius="30"
+                        IsVisible="true"
+                        />
+                </Grid>
+            </StackLayout>
+            <Label 
+                Text="Quiz de 4 preguntas"
+                x:Name="lblpuntuacion"
+                HorizontalOptions="EndAndExpand"
+                VerticalOptions="EndAndExpand"
+                FontSize="15"
+              
+                />
+
         </StackLayout>
     </Grid>
 </ContentPage>

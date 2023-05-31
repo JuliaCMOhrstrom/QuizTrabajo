@@ -32,5 +32,7 @@ namespace Quiz
             await Navigation.PushAsync(new Geografia());
         }
 
+
+
     }
 }

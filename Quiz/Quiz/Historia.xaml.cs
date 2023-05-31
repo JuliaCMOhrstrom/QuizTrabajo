@@ -77,14 +77,7 @@ namespace Quiz
         };
         int point = 1, score = 0;
         string RespuestaCorrecta;
-        public Espanol()
-        {
-            InitializeComponent();
-        }
-        async void Re(object sender, EventArgs args)
-        {
-            await Navigation.PushAsync(new MainPage());
-        }
+        
         public object btnPuntuacion { get; private set; }
         public static List<Preguntas> Listapreguntas { get => listapreguntas; set => listapreguntas = value; }
         public static List<Preguntas> Listapreguntas1 { get => listapreguntas; set => listapreguntas = value; }

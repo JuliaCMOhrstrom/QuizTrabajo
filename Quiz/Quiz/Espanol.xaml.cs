@@ -69,6 +69,8 @@ namespace Quiz
         };
         int point = 1, score = 0;
         string RespuestaCorrecta;
+        private object btnpuntuacion;
+
         public Espanol()
         {
             InitializeComponent();
@@ -149,7 +151,7 @@ namespace Quiz
             }
             point++;
             SetPregunta(point);
-            
+            btnpuntuacion.IsVisible = true;            
         }
         async void MostrarAlerta(object sender, EventArgs e)
         {
