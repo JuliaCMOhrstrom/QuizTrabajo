@@ -79,7 +79,7 @@ namespace Quiz
         string RespuestaCorrecta;
         
         
-        public object btnPuntuacion { get; private set; }
+        public object btnpuntuacion { get; private set; }
         public static List<Preguntas> Listapreguntas { get => listapreguntas; set => listapreguntas = value; }
         public static List<Preguntas> Listapreguntas1 { get => listapreguntas; set => listapreguntas = value; }
 

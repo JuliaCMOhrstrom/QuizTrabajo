@@ -20,36 +20,41 @@
                    HorizontalOptions="Center"
                    FontSize="20"
                    FontFamily="Italic"/>
+                
                 <Label x:Name="lblPregunta"
+                       Text="¿Cuándo comienza la primera guerra mundial?"
+                       FontSize="15"
+                       FontAttributes="Bold"
+                       
                    />
 
             </StackLayout>
         </Grid>
 
         <StackLayout Margin="20,250,20,20">
-            <Button Text="RespuestasA"
+            <Button Text="1945"
                     x:Name="btnresp1"
-                    BackgroundColor="#B7D2B2" 
+                    BackgroundColor="Salmon" 
                     BorderColor="Aquamarine"
                     BorderWidth="1"
                     CornerRadius="20"
 
                     />
-            <Button Text="RespuestasB"
+            <Button Text="1910"
                     x:Name="btnresp2"
                     Background="Salmon"
                     BorderColor="Aquamarine"
                     BorderWidth="1"
                     CornerRadius="20"
                     />
-            <Button Text="RespuestasC"
+            <Button Text="1950"
                     x:Name="btnresp3"
                     Background="Salmon"
                     BorderColor="Aquamarine"
                     BorderWidth="1"
                     CornerRadius="20"
                     />
-            <Button Text="RespuestasC"
+            <Button Text="1925"
                     x:Name="btnresp4"
                     Background="Salmon"
                     BorderColor="Aquamarine"

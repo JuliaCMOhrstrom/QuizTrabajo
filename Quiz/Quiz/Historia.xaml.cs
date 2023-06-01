@@ -26,18 +26,18 @@ namespace Quiz
             new Preguntas
             {
                 Id = 1,
-                Quest_ = "¿Quién es el autor de la frase `Pienso, luego existo`",
-                resp1_ = "Platon",
-                resp2_ = "Galileo Galilei",
-                resp3_ = "Descartes",
-                resp4_ = "Sócrates",
-                Correcto = "Descartes",
+                Quest_ = "¿Cuándo comienza la primera guerra mundial?",
+                resp1_ = "1945",
+                resp2_ = "1914",
+                resp3_ = "1950",
+                resp4_ = "1925",
+                Correcto = "1914",
             },
             new Preguntas
             {
                 Id = 2,
-                Quest_ = "¿Cuál es el grupo de palabras escritas correctamente?",
-                resp1_ = "Metamorfosis, extranjero, diversidac, equilivrio",
+                Quest_ = "¿Cuál es la civilización más antigua del mundo?",
+                resp1_ = "mesopotamia",
                 resp2_ = "Metamorfosis, extranjero, diversidad, equilibrio",
                 resp3_ = "Metamorfosis, extrangero, dibersidad, equilibrio",
                 resp4_= "Metamórfosis, eztranjero, divérsidad, ecuilibrio",
@@ -78,7 +78,7 @@ namespace Quiz
         int point = 1, score = 0;
         string RespuestaCorrecta;
         
-        public object btnPuntuacion { get; private set; }
+        public object btnpuntuacion { get; private set; }
         public static List<Preguntas> Listapreguntas { get => listapreguntas; set => listapreguntas = value; }
         public static List<Preguntas> Listapreguntas1 { get => listapreguntas; set => listapreguntas = value; }
 
@@ -98,6 +98,7 @@ namespace Quiz
                 btnresp2.Text = list.resp2_;
                 btnresp3.Text = list.resp3_;
                 btnresp4.Text = list.resp4_;
+                btnresp5.Text = list.resp5_;
                 RespuestaCorrecta = list.Correcto;
             }
             catch (Exception)
@@ -150,6 +151,7 @@ namespace Quiz
             }
             point++;
             SetPregunta(point);
+            
 
         }
         async void MostrarAlerta(object sender, EventArgs e)

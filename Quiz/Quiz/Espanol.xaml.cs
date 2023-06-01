@@ -69,7 +69,7 @@ namespace Quiz
         };
         int point = 1, score = 0;
         string RespuestaCorrecta;
-        private object btnpuntuacion;
+        
 
         public Espanol()
         {

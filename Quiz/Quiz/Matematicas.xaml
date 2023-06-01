@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Quiz.Matematicas">
 
-    <Grid>
+    <Grid BackgroundColor="#80CEE1">
 
         <Grid Grid.Row="0" Margin="0,10,0,0">
             <StackLayout Orientation="Vertical"
@@ -11,51 +11,64 @@
                      >
 
                 <Label Text="Matematícas"
-                VerticalOptions="Fill" 
-                HorizontalOptions="CenterAndExpand"
-                   FontSize="50"
-                   FontFamily="Lobster-Regular"
-                   FontAttributes="Bold"
+                       VerticalOptions="Fill" 
+                       HorizontalOptions="CenterAndExpand" 
+                       FontSize="50"
+                       FontFamily="Lobster-Regular"
+                       FontAttributes="Bold"
+                       TextColor="Black"
+                      
                    />
                 <Label Text="Seleccione la respuesta correcta"
-                   HorizontalOptions="Center"
-                   FontSize="20"
-                   FontFamily="Italic"/>
+                       HorizontalOptions="Center"
+                       FontSize="23"
+                       FontFamily="Italic"
+                       TextColor="Black"/>
                 
                 <Label x:Name="lblPregunta"
-                   />
+                       Text="¿Cuál es la representación del número nueve mil treinta y seis?"
+                       FontSize="20"
+                       TextColor="Black"
+                       FontAttributes="Bold"
+                       HorizontalOptions="CenterAndExpand"
+                       Margin="20,15,20,5"
+                       />
 
             </StackLayout>
         </Grid>
 
         <StackLayout Margin="20,250,20,20">
-            <Button Text="RespuestasA"
+            <Button Text="90036"
                     x:Name="btnresp1"
                     Background="Salmon"
                     BorderColor="Aquamarine"
                     BorderWidth="1"
                     CornerRadius="20"
+                    Clicked="Button2_Clicked"
                     />
-            <Button Text="RespuestasB"
+            <Button Text="936"
                     x:Name="btnresp2"
                     Background="Salmon"
                     BorderColor="Aquamarine"
                     BorderWidth="1"
                     CornerRadius="20"
+                    Clicked="Button3_Clicked"
                     />
-            <Button Text="RespuestasC"
+            <Button Text="900036"
                     x:Name="btnresp3"
                     Background="Salmon"
                     BorderColor="Aquamarine"
                     BorderWidth="1"
                     CornerRadius="20"
+                    Clicked="Button4_Clicked"
                     />
-            <Button Text="RespuestasC"
+            <Button Text="9036"
                     x:Name="btnresp4"
                     Background="Salmon"
                     BorderColor="Aquamarine"
                     BorderWidth="1"
                     CornerRadius="20"
+                    Clicked="Button5_Clicked"
 
                     />
 
