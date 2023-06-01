@@ -31,53 +31,53 @@ namespace Quiz
                 resp2_ = "1914",
                 resp3_ = "1950",
                 resp4_ = "1925",
-                Correcto = "1914",
+                CorrectoH = "1914",
             },
             new Preguntas
             {
                 Id = 2,
                 Quest_ = "¿Cuál es la civilización más antigua del mundo?",
                 resp1_ = "mesopotamia",
-                resp2_ = "Metamorfosis, extranjero, diversidad, equilibrio",
-                resp3_ = "Metamorfosis, extrangero, dibersidad, equilibrio",
-                resp4_= "Metamórfosis, eztranjero, divérsidad, ecuilibrio",
-                Correcto = "Metamorfosis, extranjero, diversidad, equilibrio",
+                resp2_ = "El imperio Jemer",
+                resp3_ = "El imperio Aqueménida",
+                resp4_= "Los fenicios",
+                CorrectoH = "mesopotamia",
             },
             new Preguntas
             {
                 Id = 3,
-                Quest_ = "¿Cuáles son los representantes más destacados de la literatura renacentista?",
-                resp1_= "orge Isaac, José Martí, Eduardo Blanco",
-                resp2_ = "Leonardo da Vinci, Miguel Angel Buonarroti, Sandro Boticelli",
-                resp3_ = "Miguel de Cervantes, William Shakespeare, Luis de Camões.",
-                resp4_ = "orge Isaac, José Martí, Eduardo Blanco",
-                Correcto = "Miguel de Cervantes, William Shakespeare, Luis de Camões.",
+                Quest_ = "¿De qué país se originó la civilización azteca?",
+                resp1_= "China",
+                resp2_ = "Japón",
+                resp3_ = "México",
+                resp4_ = "Estados Unidos",
+                CorrectoH = "México",
 
             },
             new Preguntas
             {
                 Id = 4,
-                Quest_ = "¿A quién se le atribuye la frase `Solo sé que no sé nada`?",
-                resp1_ = "Sófocles",
-                resp2_ = "Salomón",
-                resp3_ = "Nietszche",
-                resp4_ = "Aristóteles",
-                Correcto = "Sócrates",
+                Quest_ = "¿Cuándo sucedió el Holocausto, uno de los eventos más terribles de la historia?",
+                resp1_ = "Durante la conquista",
+                resp2_ = "Durante la Revolución",
+                resp3_ = "Durante la Primera Guerra Mundial",
+                resp4_ = "Durante la Segunda Guerra Mundial",
+                CorrectoH = "Durante la Segunda Guerra Mundial",
             },
             new Preguntas
             {
                 Id = 5,
-                Quest_ = "Identifica el enunciado en el que la función de la lengua es poética.",
-                resp1_ = "Chopin soñó que estaba muerto en el lago.",
-                resp2_ = "Era apenas una niña cuando la vi por primera vez.",
-                resp3_ = "A las tres en punto moriría un transeúnte",
-                resp4_ = "Las nieves del tiempo platearon mi sien.",
-                Correcto = "Las nieves del tiempo platearon mi sien.",
+                Quest_ = "¿Cuándo fue derribado el muro de Berlín?",
+                resp1_ = "1991",
+                resp2_ = "1989",
+                resp3_ = "1990",
+                resp4_ = "1980",
+                CorrectoH = "1989",
             }
         };
         int point = 1, score = 0;
-        string RespuestaCorrecta;
-        
+        string RespuestaCorrectaH;
+              
         public object btnpuntuacion { get; private set; }
         public static List<Preguntas> Listapreguntas { get => listapreguntas; set => listapreguntas = value; }
         public static List<Preguntas> Listapreguntas1 { get => listapreguntas; set => listapreguntas = value; }
@@ -98,18 +98,17 @@ namespace Quiz
                 btnresp2.Text = list.resp2_;
                 btnresp3.Text = list.resp3_;
                 btnresp4.Text = list.resp4_;
-                btnresp5.Text = list.resp5_;
-                RespuestaCorrecta = list.Correcto;
+                RespuestaCorrectaH = list.CorrectoH;
             }
             catch (Exception)
             {
 
             }
-            return RespuestaCorrecta;
+            return RespuestaCorrectaH;
         }
         private void Button1_Clicked(object sender, EventArgs e)
         {
-            if (btnresp1.Text == RespuestaCorrecta)
+            if (btnresp1.Text == RespuestaCorrectaH)
             {
                 score++;
             }
@@ -118,7 +117,7 @@ namespace Quiz
         }
         private void Button2_Clicked(object sender, EventArgs e)
         {
-            if (btnresp2.Text == RespuestaCorrecta)
+            if (btnresp2.Text == RespuestaCorrectaH)
             {
                 score++;
             }
@@ -127,7 +126,7 @@ namespace Quiz
         }
         private void Button3_Clicked(object sender, EventArgs e)
         {
-            if (btnresp3.Text == RespuestaCorrecta)
+            if (btnresp3.Text == RespuestaCorrectaH)
             {
                 score++;
             }
@@ -136,16 +135,7 @@ namespace Quiz
         }
         private void Button4_Clicked(object sender, EventArgs e)
         {
-            if (btnresp4.Text == RespuestaCorrecta)
-            {
-                score++;
-            }
-            point++;
-            SetPregunta(point);
-        }
-        private void Button5_Clicked(object sender, EventArgs e)
-        {
-            if (btnresp2.Text == RespuestaCorrecta)
+            if (btnresp4.Text == RespuestaCorrectaH)
             {
                 score++;
             }
@@ -156,7 +146,7 @@ namespace Quiz
         }
         async void MostrarAlerta(object sender, EventArgs e)
         {
-            await DisplayAlert("Puntuación", "Su Puntuación final es de: " + score + "/ 4 puntos.", "OK");
+            await DisplayAlert("Puntuación", "Su Puntuación final es de: " + score + "/ 5 puntos.", "OK");
         }
     }
 }

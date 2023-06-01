@@ -26,60 +26,60 @@ namespace Quiz
             new Preguntas
             {
                 Id = 1,
-                Quest_ = "¿Quién es el autor de la frase `Pienso, luego existo`",
-                resp1_ = "Platon",
-                resp2_ = "Galileo Galilei",
-                resp3_ = "Descartes",
-                resp4_ = "Sócrates",
-                Correcto = "Descartes",
+                Quest_ = "¿Cuál es el río más largo de la Península de Ibérica?",
+                resp1_ = "El río Tajo",
+                resp2_ = "Elrío Miño",
+                resp3_ = "El  río Guadiana",
+                resp4_ = "Elrío Ebro",
+                CorrectoG = "El río Tajo",
             },
             new Preguntas
             {
                 Id = 2,
-                Quest_ = "¿Cuál es el grupo de palabras escritas correctamente?",
-                resp1_ = "Metamorfosis, extranjero, diversidac, equilivrio",
-                resp2_ = "Metamorfosis, extranjero, diversidad, equilibrio",
-                resp3_ = "Metamorfosis, extrangero, dibersidad, equilibrio",
-                resp4_= "Metamórfosis, eztranjero, divérsidad, ecuilibrio",
-                Correcto = "Metamorfosis, extranjero, diversidad, equilibrio",
+                Quest_ = "¿Cuál es el país más pequeño del mundo?",
+                resp1_ = "Vaticano",
+                resp2_ = "Japón",
+                resp3_ = "México",
+                resp4_= "Rusia",
+                CorrectoG = "Vaticano",
             },
             new Preguntas
             {
                 Id = 3,
-                Quest_ = "¿Cuáles son los representantes más destacados de la literatura renacentista?",
-                resp1_= "orge Isaac, José Martí, Eduardo Blanco",
-                resp2_ = "Leonardo da Vinci, Miguel Angel Buonarroti, Sandro Boticelli",
-                resp3_ = "Miguel de Cervantes, William Shakespeare, Luis de Camões.",
-                resp4_ = "orge Isaac, José Martí, Eduardo Blanco",
-                Correcto = "Miguel de Cervantes, William Shakespeare, Luis de Camões.",
+                Quest_ = "¿Cuántos océanos hay en la Tierra?",
+                resp1_= "9",
+                resp2_ = "7",
+                resp3_ = "8",
+                resp4_ = "5",
+                CorrectoG = "5",
 
             },
             new Preguntas
             {
                 Id = 4,
-                Quest_ = "¿A quién se le atribuye la frase `Solo sé que no sé nada`?",
-                resp1_ = "Sófocles",
-                resp2_ = "Salomón",
-                resp3_ = "Nietszche",
-                resp4_ = "Aristóteles",
-                Correcto = "Sócrates",
+                Quest_ = "¿Cuál es el País más grande del mundo?",
+                resp1_ = "Rusia",
+                resp2_ = "China",
+                resp3_ = "Alemania",
+                resp4_ = "México",
+                CorrectoG = "Rusia",
             },
             new Preguntas
             {
                 Id = 5,
-                Quest_ = "Identifica el enunciado en el que la función de la lengua es poética.",
-                resp1_ = "Chopin soñó que estaba muerto en el lago.",
-                resp2_ = "Era apenas una niña cuando la vi por primera vez.",
-                resp3_ = "A las tres en punto moriría un transeúnte",
-                resp4_ = "Las nieves del tiempo platearon mi sien.",
-                Correcto = "Las nieves del tiempo platearon mi sien.",
+                Quest_ = "¿Cuántos estados forman parte de Estados Unidos?",
+                resp1_ = "50",
+                resp2_ = "135",
+                resp3_ = "25",
+                resp4_ = "65",
+                CorrectoG = "50",
             }
         };
         int point = 1, score = 0;
-        string RespuestaCorrecta;
-        
-        
-        public object btnpuntuacion { get; private set; }
+        string RespuestaCorrectaG;
+
+
+        public object btnPuntuacion { get; private set; }
         public static List<Preguntas> Listapreguntas { get => listapreguntas; set => listapreguntas = value; }
         public static List<Preguntas> Listapreguntas1 { get => listapreguntas; set => listapreguntas = value; }
 
@@ -99,17 +99,17 @@ namespace Quiz
                 btnresp2.Text = list.resp2_;
                 btnresp3.Text = list.resp3_;
                 btnresp4.Text = list.resp4_;
-                RespuestaCorrecta = list.Correcto;
+                RespuestaCorrectaG = list.CorrectoG;
             }
             catch (Exception)
             {
 
             }
-            return RespuestaCorrecta;
+            return RespuestaCorrectaG;
         }
         private void Button1_Clicked(object sender, EventArgs e)
         {
-            if (btnresp1.Text == RespuestaCorrecta)
+            if (btnresp1.Text == RespuestaCorrectaG)
             {
                 score++;
             }
@@ -118,7 +118,7 @@ namespace Quiz
         }
         private void Button2_Clicked(object sender, EventArgs e)
         {
-            if (btnresp2.Text == RespuestaCorrecta)
+            if (btnresp2.Text == RespuestaCorrectaG)
             {
                 score++;
             }
@@ -127,7 +127,7 @@ namespace Quiz
         }
         private void Button3_Clicked(object sender, EventArgs e)
         {
-            if (btnresp3.Text == RespuestaCorrecta)
+            if (btnresp3.Text == RespuestaCorrectaG)
             {
                 score++;
             }
@@ -136,23 +136,15 @@ namespace Quiz
         }
         private void Button4_Clicked(object sender, EventArgs e)
         {
-            if (btnresp4.Text == RespuestaCorrecta)
+            if (btnresp4.Text == RespuestaCorrectaG)
             {
                 score++;
             }
             point++;
             SetPregunta(point);
-        }
-        private void Button5_Clicked(object sender, EventArgs e)
-        {
-            if (btnresp2.Text == RespuestaCorrecta)
-            {
-                score++;
-            }
-            point++;
-            SetPregunta(point);
+            
 
-        }
+        } 
         async void MostrarAlerta(object sender, EventArgs e)
         {
             await DisplayAlert("Puntuación", "Su Puntuación final es de: " + score + "/ 4 puntos.", "OK");

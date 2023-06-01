@@ -23,7 +23,7 @@ namespace Quiz
                 resp2_ = "Galileo Galilei",
                 resp3_ = "Descartes",
                 resp4_ = "Sócrates",
-                Correcto = "Descartes",
+                CorrectoE = "Descartes",
             },
             new Preguntas
             {
@@ -33,7 +33,7 @@ namespace Quiz
                 resp2_ = "Metamorfosis, extranjero, diversidad, equilibrio",
                 resp3_ = "Metamorfosis, extrangero, dibersidad, equilibrio",
                 resp4_= "Metamórfosis, eztranjero, divérsidad, ecuilibrio",
-                Correcto = "Metamorfosis, extranjero, diversidad, equilibrio",
+                CorrectoE = "Metamorfosis, extranjero, diversidad, equilibrio",
             },
             new Preguntas
             {
@@ -43,7 +43,7 @@ namespace Quiz
                 resp2_ = "Leonardo da Vinci, Miguel Angel Buonarroti, Sandro Boticelli",
                 resp3_ = "Miguel de Cervantes, William Shakespeare, Luis de Camões.",
                 resp4_ = "orge Isaac, José Martí, Eduardo Blanco",
-                Correcto = "Miguel de Cervantes, William Shakespeare, Luis de Camões.",
+                CorrectoE = "Miguel de Cervantes, William Shakespeare, Luis de Camões.",
 
             },
             new Preguntas
@@ -54,7 +54,7 @@ namespace Quiz
                 resp2_ = "Salomón",
                 resp3_ = "Nietszche",
                 resp4_ = "Aristóteles",
-                Correcto = "Sócrates",
+                CorrectoE = "Sócrates",
             },
             new Preguntas
             {
@@ -64,11 +64,11 @@ namespace Quiz
                 resp2_ = "Era apenas una niña cuando la vi por primera vez.",
                 resp3_ = "A las tres en punto moriría un transeúnte",
                 resp4_ = "Las nieves del tiempo platearon mi sien.",
-                Correcto = "Las nieves del tiempo platearon mi sien.",
+                CorrectoE = "Las nieves del tiempo platearon mi sien.",
             }
         };
         int point = 1, score = 0;
-        string RespuestaCorrecta;
+        string RespuestaCorrectaE;
         
 
         public Espanol()
@@ -99,17 +99,17 @@ namespace Quiz
                 btnresp2.Text = list.resp2_;
                 btnresp3.Text = list.resp3_;
                 btnresp4.Text = list.resp4_;
-                RespuestaCorrecta = list.Correcto;
+                RespuestaCorrectaE = list.CorrectoE;
             }
             catch (Exception)
             {
 
             }
-            return RespuestaCorrecta;
+            return RespuestaCorrectaE;
         }
         private void Button1_Clicked(object sender, EventArgs e)
         {
-            if (btnresp1.Text == RespuestaCorrecta)
+            if (btnresp1.Text == RespuestaCorrectaE)
             {
                 score++;
             }
@@ -118,7 +118,7 @@ namespace Quiz
         }
         private void Button2_Clicked(object sender, EventArgs e)
         {
-            if (btnresp2.Text == RespuestaCorrecta)
+            if (btnresp2.Text == RespuestaCorrectaE)
             {
                 score++;
             }
@@ -127,7 +127,7 @@ namespace Quiz
         }
         private void Button3_Clicked(object sender, EventArgs e)
         {
-            if (btnresp3.Text == RespuestaCorrecta)
+            if (btnresp3.Text == RespuestaCorrectaE)
             {
                 score++;
             }
@@ -136,26 +136,18 @@ namespace Quiz
         }
         private void Button4_Clicked(object sender, EventArgs e)
         {
-            if (btnresp4.Text == RespuestaCorrecta)
+            if (btnresp4.Text == RespuestaCorrectaE)
             {
                 score++;
             }
             point++;
             SetPregunta(point);
-        }
-        private void Button5_Clicked(object sender, EventArgs e)
-        {
-            if (btnresp2.Text == RespuestaCorrecta)
-            {
-                score++;
-            }
-            point++;
-            SetPregunta(point);
-            btnpuntuacion.IsVisible = true;            
+            btnpuntuacion.IsVisible = true;
+
         }
         async void MostrarAlerta(object sender, EventArgs e)
         {
-            await DisplayAlert("Puntuación", "Su Puntuación final es de: " + score + "/ 4 puntos.", "OK");
+            await DisplayAlert("Puntuación", "Su Puntuación final es de: " + score + "/ 5 puntos.", "OK");
         }
     }
 }

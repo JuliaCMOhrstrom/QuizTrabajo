@@ -27,57 +27,58 @@ namespace Quiz
             new Preguntas
             {
                 Id = 1,
-                Quest_ = "¿Quién es el autor de la frase `Pienso, luego existo`",
-                resp1_ = "Platon",
-                resp2_ = "Galileo Galilei",
-                resp3_ = "Descartes",
-                resp4_ = "Sócrates",
-                Correcto = "Descartes",
+                Quest_ = "¿Cuál es la representación del número nueve mil treinta y seis?",
+                resp1_ = "90036",
+                resp2_ = "936",
+                resp3_ = "900036",
+                resp4_ = "9036",
+                CorrectoM = "9036",
             },
-            new Preguntas
+           new Preguntas
             {
                 Id = 2,
-                Quest_ = "¿Cuál es el grupo de palabras escritas correctamente?",
-                resp1_ = "Metamorfosis, extranjero, diversidac, equilivrio",
-                resp2_ = "Metamorfosis, extranjero, diversidad, equilibrio",
-                resp3_ = "Metamorfosis, extrangero, dibersidad, equilibrio",
-                resp4_= "Metamórfosis, eztranjero, divérsidad, ecuilibrio",
-                Correcto = "Metamorfosis, extranjero, diversidad, equilibrio",
+                Quest_ = "¿Si en una carrera vas tres puestos por detrás del vigésimo segundo," +
+                " ¿En qué puesto vas??",
+                resp1_ = "Decimonoveno",
+                resp2_ = "Decimotercero",
+                resp3_ = "Decimo",
+                resp4_= "Noveno",
+                CorrectoG = "Dcimonoveno",
             },
             new Preguntas
             {
                 Id = 3,
-                Quest_ = "¿Cuáles son los representantes más destacados de la literatura renacentista?",
-                resp1_= "orge Isaac, José Martí, Eduardo Blanco",
-                resp2_ = "Leonardo da Vinci, Miguel Angel Buonarroti, Sandro Boticelli",
-                resp3_ = "Miguel de Cervantes, William Shakespeare, Luis de Camões.",
-                resp4_ = "orge Isaac, José Martí, Eduardo Blanco",
-                Correcto = "Miguel de Cervantes, William Shakespeare, Luis de Camões.",
+                Quest_ = "¿Qué número resulta si divides 56 entre 7?",
+                resp1_= "9",
+                resp2_ = "7",
+                resp3_ = "8",
+                resp4_ = "6",
+                CorrectoG = "8",
 
             },
             new Preguntas
             {
                 Id = 4,
-                Quest_ = "¿A quién se le atribuye la frase `Solo sé que no sé nada`?",
-                resp1_ = "Sófocles",
-                resp2_ = "Salomón",
-                resp3_ = "Nietszche",
-                resp4_ = "Aristóteles",
-                Correcto = "Sócrates",
+                Quest_ = "¿Qué cantidad expresa el número romano V?",
+                resp1_ = "Diez",
+                resp2_ = "Cinco",
+                resp3_ = "Uno",
+                resp4_ = "Cien",
+                CorrectoG = "Cinco",
             },
             new Preguntas
             {
                 Id = 5,
-                Quest_ = "Identifica el enunciado en el que la función de la lengua es poética.",
-                resp1_ = "Chopin soñó que estaba muerto en el lago.",
-                resp2_ = "Era apenas una niña cuando la vi por primera vez.",
-                resp3_ = "A las tres en punto moriría un transeúnte",
-                resp4_ = "Las nieves del tiempo platearon mi sien.",
-                Correcto = "Las nieves del tiempo platearon mi sien.",
+                Quest_ = "¿Cuál es el número trigésimo quinto?",
+                resp1_ = "35",
+                resp2_ = "135",
+                resp3_ = "25",
+                resp4_ = "65",
+                CorrectoG = "35",
             }
         };
         int point = 1, score = 0;
-        string RespuestaCorrecta;
+        string RespuestaCorrectaM;
 
         public object btnPuntuacion { get; private set; }
         public static List<Preguntas> Listapreguntas { get => listapreguntas; set => listapreguntas = value; }
@@ -99,17 +100,17 @@ namespace Quiz
                 btnresp2.Text = list.resp2_;
                 btnresp3.Text = list.resp3_;
                 btnresp4.Text = list.resp4_;
-                RespuestaCorrecta = list.Correcto;
+                RespuestaCorrectaM = list.CorrectoM;
             }
             catch (Exception)
             {
 
             }
-            return RespuestaCorrecta;
+            return RespuestaCorrectaM;
         }
         private void Button1_Clicked(object sender, EventArgs e)
         {
-            if (btnresp1.Text == RespuestaCorrecta)
+            if (btnresp4.Text == RespuestaCorrectaM)
             {
                 score++;
             }
@@ -118,7 +119,7 @@ namespace Quiz
         }
         private void Button2_Clicked(object sender, EventArgs e)
         {
-            if (btnresp2.Text == RespuestaCorrecta)
+            if (btnresp1.Text == RespuestaCorrectaM)
             {
                 score++;
             }
@@ -127,7 +128,7 @@ namespace Quiz
         }
         private void Button3_Clicked(object sender, EventArgs e)
         {
-            if (btnresp3.Text == RespuestaCorrecta)
+            if (btnresp3.Text == RespuestaCorrectaM)
             {
                 score++;
             }
@@ -136,7 +137,7 @@ namespace Quiz
         }
         private void Button4_Clicked(object sender, EventArgs e)
         {
-            if (btnresp4.Text == RespuestaCorrecta)
+            if (btnresp2.Text == RespuestaCorrectaM)
             {
                 score++;
             }
@@ -145,7 +146,7 @@ namespace Quiz
         }
         private void Button5_Clicked(object sender, EventArgs e)
         {
-            if (btnresp2.Text == RespuestaCorrecta)
+            if (btnresp2.Text == RespuestaCorrectaM)
             {
                 score++;
             }

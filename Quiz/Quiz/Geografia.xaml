@@ -71,6 +71,32 @@
                     VerticalOptions="StartAndExpand"
                     Clicked="Re"
                     />
+
+            <StackLayout>
+                <Grid Margin="0,30,0,0">
+                    <Button
+                        Text="Mostrar Puntuación final"
+                        x:Name="btnpuntuacion"
+                        TextColor="Black"
+                        Background="Aquamarine"
+                        HorizontalOptions="EndAndExpand"
+                        VerticalOptions="EndAndExpand"
+                        FontAttributes="Bold"
+                        Clicked="MostrarAlerta"
+                        BorderWidth="50"
+                        CornerRadius="30"
+                        IsVisible="true"
+                        />
+                </Grid>
+            </StackLayout>
+            <Label 
+                Text="Quiz de 5 preguntas"
+                x:Name="lblpuntuacion"
+                HorizontalOptions="EndAndExpand"
+                VerticalOptions="EndAndExpand"
+                FontSize="15"
+              
+                />
         </StackLayout>
     </Grid>
 </ContentPage>

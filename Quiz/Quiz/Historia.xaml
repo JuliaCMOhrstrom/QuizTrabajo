@@ -92,7 +92,7 @@
                 </Grid>
             </StackLayout>
             <Label 
-                Text="Quiz de 4 preguntas"
+                Text="Quiz de 5 preguntas"
                 x:Name="lblpuntuacion"
                 HorizontalOptions="EndAndExpand"
                 VerticalOptions="EndAndExpand"
